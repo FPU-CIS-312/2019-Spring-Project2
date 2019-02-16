@@ -1,0 +1,74 @@
+#### Completed by Emmanuel Montez and Adolfo Marquez ####
+from math import ceil
+
+#List ingredient amounts (in grams) for 24 cookies
+butter = 113
+sugar = 99
+brown_sugar = 54
+vanilla_extract = 40
+eggs = 1
+flour = 210
+baking_soda = 2.5
+salt = 2.5
+chocolate_chips = 170
+
+#List cost for each ingredient
+butter_cost = 2.50
+sugar_cost = 0.26
+brown_sugar_cost = 0.80
+vanilla_extract_cost = 6.92
+eggs_cost = 0.38
+flour_cost = 1.23
+baking_soda_cost = .07
+salt_cost = 0.0018
+chocolate_chips_cost = 0.013
+
+total_cost = 0.0
+
+#Gather input from user
+num_of_cookies = int(input("How many cookies would you like to make? "))
+
+#Determine amounts needed for desired yield
+def ingredientAmount(int):
+    amount = ceil((int/24)*num_of_cookies)
+    return amount
+
+#Determine cost per ingredient
+def ingredientCost(float):
+    cost = (float/24)*num_of_cookies
+    
+    if cost%2 == 0:
+        return(cost)
+    else:
+        return(round(cost,2))
+
+#determine amount needed for desired yield
+butter = ingredientAmount(butter)
+sugar = ingredientAmount(sugar)
+brown_sugar = ingredientAmount(brown_sugar)
+vanilla_extract = ingredientAmount(vanilla_extract)
+eggs = ingredientAmount(eggs)
+flour = ingredientAmount(flour)
+baking_soda = ingredientAmount(baking_soda)
+salt = ingredientAmount(salt)
+chocolate_chips = ingredientAmount(chocolate_chips)
+
+#display total amount of each ingredient
+print("You will need:\n {} grams of butter, {} grams of sugar, {} grams of brown sugar, {} grams of vanilla extract, {} egg(s), {} grams of flour, {} grams of baking soda, and {} grams of salt, and {} grams of chocolate chips.".format(butter, sugar, brown_sugar, vanilla_extract, eggs, flour, baking_soda, salt, chocolate_chips))
+
+#display total cost
+butter_cost = ingredientCost(butter_cost)
+sugar_cost = ingredientCost(sugar_cost)
+brown_sugar_cost = ingredientCost(brown_sugar_cost)
+vanilla_extract_cost = ingredientCost(vanilla_extract_cost)
+eggs_cost = ingredientCost(eggs_cost)
+flour_cost = ingredientCost(flour_cost)
+baking_soda_cost = ingredientCost(baking_soda_cost)
+salt_cost = ingredientCost(salt_cost)
+chocolate_chips_cost = ingredientCost(chocolate_chips_cost)
+
+total_cost = butter_cost + sugar_cost + brown_sugar_cost + vanilla_extract_cost + eggs_cost + flour_cost + baking_soda_cost + salt_cost + chocolate_chips_cost
+
+print("Your estimated total cost is ${}".format(round(total_cost, 2)))
+
+print("Here is the link to our recipe: https://www.ihearteating.com/easiest-chocolate-chip-cookie-recipe/")
