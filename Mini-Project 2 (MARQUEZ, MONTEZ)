@@ -68,6 +68,7 @@ salt_cost = ingredientCost(salt_cost)
 chocolate_chips_cost = ingredientCost(chocolate_chips_cost)
 
 total_cost = butter_cost + sugar_cost + brown_sugar_cost + vanilla_extract_cost + eggs_cost + flour_cost + baking_soda_cost + salt_cost + chocolate_chips_cost
+print("Butter will cost ${}, sugar will cost ${}, brown sugar will cost ${}, vanilla extract will cost ${}, eggs will cost ${}, flour will cost ${}, baking soda will cost ${}, salt will cost ${}, and chocolate chips will cost ${}.".format(butter_cost, sugar_cost, brown_sugar_cost, vanilla_extract_cost, eggs_cost, flour_cost, baking_soda_cost, salt_cost, chocolate_chips_cost))
 
 print("Your estimated total cost is ${}".format(round(total_cost, 2)))
 
